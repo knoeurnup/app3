@@ -105,12 +105,12 @@ pipeline {
                             echo "key:" + key +" => " + value
                             if(key=="APP3_VERSION"){
                                 if(value!= getNewVersion()){
-                                    newEnvironmentFileContent +="${key}=${getNewVersion()}\n"
+                                    newEnvironmentFileContent +="${key}=${getNewVersion()}"
                                 }
                             }else if(key=="APP1_VERSION"){
                                 newEnvironmentFileContent +="${key}=${value}\n"
                             }else if(key=="APP2_VERSION"){ 
-                                newEnvironmentFileContent +="${key}=${value}"
+                                newEnvironmentFileContent +="${key}=${value}\n"
                             }
                           }
                       }
