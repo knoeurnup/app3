@@ -6,6 +6,10 @@ FROM node:8
 #        libgdiplus \
 #        libx11-dev \
 #     && rm -rf /var/lib/apt/lists/*
+
+# Define build arguments
+ARG APP_VERSION
+
 WORKDIR /usr/src/app
 COPY package.json ./
 RUN npm install
