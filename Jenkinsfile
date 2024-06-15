@@ -164,12 +164,12 @@ pipeline {
     }
 
     post {
-        failure {
-            sendTelegramMessage( "This block (failture) runs when the build is failed.")
-        }
-        success {
-            sendTelegramMessage( "This block (success) runs when the build is succeeded.")
-        }
+      failure {
+            sendTelegramMessage( "Oops!! Your app was built and deployed fail.")
+      }
+      success {
+          sendTelegramMessage( "Congratulations!!!  Your app was built and deployed successfully.")
+      }
     }
 }
 
